@@ -5,14 +5,12 @@ import { errorHandler } from "./utils/error-handler";
 
 const app: Application = express();
 
-const ROUTE_PREFIX = process.env.ROUTE_PREFIX || "/v1";
-
 //Register containers
 registerContainer(app);
 
 //Load controllers
 app.use(
-  ROUTE_PREFIX,
+  "/v1",
   loadControllers("controllers/*/*.controller.ts", { cwd: __dirname })
 );
 
