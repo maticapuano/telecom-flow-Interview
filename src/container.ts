@@ -3,6 +3,7 @@ import { scopePerRequest } from "awilix-express";
 import { Application } from "express";
 import { IpApiService } from "./services/IpApi.service";
 import { TestService } from "./services/test.service";
+import { UseRequestService } from "./services/use-request.service";
 
 export default (app: Application): void => {
   const container = createContainer({ injectionMode: "CLASSIC" });
@@ -12,6 +13,7 @@ export default (app: Application): void => {
     //Services
     testService: asClass(TestService).scoped(),
     ipApiService: asClass(IpApiService).scoped(),
+    useRequestService: asClass(UseRequestService).scoped(),
   });
 
   app.use(scopePerRequest(container));
