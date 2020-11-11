@@ -7,6 +7,12 @@ jest.mock("../services/openweathermap.service", () => {
             city: "Fake city",
           };
         },
+        GetForecastBy5Days: () => {
+          return {
+            cnt: 40,
+            list: [],
+          };
+        },
       };
     }),
   };
