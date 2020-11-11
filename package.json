@@ -10,6 +10,10 @@
     "start": "ts-node src/server.ts",
     "test": "jest --watchAll --no-cache"
   },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
   "dependencies": {
     "@types/dotenv": "^8.2.0",
     "awilix": "^4.2.7",
