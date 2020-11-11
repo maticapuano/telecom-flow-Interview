@@ -5,6 +5,11 @@
   "repository": "git@github.com:maticapuano/telecom-flow-Interview.git",
   "author": "Matías Capuano <maticapuano97@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "start": "ts-node src/server.ts",
+    "test": "jest --watchAll --no-cache"
+  },
   "dependencies": {
     "@types/dotenv": "^8.2.0",
     "awilix": "^4.2.7",
